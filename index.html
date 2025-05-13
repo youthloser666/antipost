@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>antipost</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Splash screen -->
+    <div id="splash-screen">
+      <div class="splash-content">
+        <div class="logo">
+          <img
+            src="img/logo.jpg"
+            alt="Logo"
+            style="max-width: 150px; height: auto"
+          />
+        </div>
+        <div class="loading justify-content-center">
+          <span>.</span><span>.</span><span>.</span>
+        </div>
+      </div>
+    </div>
+    <!-- splash screen end -->
+    <!-- navbar -->
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <div class="row w-100 align-items-center">
+            <!-- HOME -->
+            <div class="col-4 text-start">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </div>
+            <!-- WORKS -->
+            <div class="col-4 text-start">
+              <a class="nav-link" href="#">WORKS</a>
+            </div>
+            <!-- INFO -->
+            <div class="col-4 text-end">
+              <a class="nav-link" href="#">INFO</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- navbar end -->
+    <!-- logo -->
+    <section>
+      <div
+        class="container d-flex justify-content-center align-items-center mt-5"
+        style="height: auto"
+      >
+        <img
+          src="img/logo.jpg"
+          alt="Logo Besar"
+          class="img-fluid"
+          id="responsive-logo"
+        />
+      </div>
+    </section>
+    <!-- logo end -->
+    <!-- Personal Works -->
+    <section>
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Personal Works</h2>
+        <!-- Carousel for Mobile and Tablet -->
+        <div
+          id="personalWorksCarousel"
+          class="carousel slide d-md-none"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="img/1.jpg"
+                class="d-block w-100"
+                alt="Work 1"
+                data-bs-toggle="modal"
+                data-bs-target="#personalWorkModal1"
+              />
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="img/2.jpg"
+                class="d-block w-100"
+                alt="Work 2"
+                data-bs-toggle="modal"
+                data-bs-target="#personalWorkModal2"
+              />
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="img/3.jpg"
+                class="d-block w-100"
+                alt="Work 3"
+                data-bs-toggle="modal"
+                data-bs-target="#personalWorkModal3"
+              />
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <img
+                src="img/4.jpg"
+                class="d-block w-100"
+                alt="Work 4"
+                data-bs-toggle="modal"
+                data-bs-target="#personalWorkModal4"
+              />
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#personalWorksCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#personalWorksCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Grid for Desktop -->
+        <div class="row d-none d-md-flex">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/1.jpg"
+              class="img-fluid"
+              alt="Work 1"
+              data-bs-toggle="modal"
+              data-bs-target="#personalWorkModal1"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/2.jpg"
+              class="img-fluid"
+              alt="Work 2"
+              data-bs-toggle="modal"
+              data-bs-target="#personalWorkModal2"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/3.jpg"
+              class="img-fluid"
+              alt="Work 3"
+              data-bs-toggle="modal"
+              data-bs-target="#personalWorkModal3"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/4.jpg"
+              class="img-fluid"
+              alt="Work 4"
+              data-bs-toggle="modal"
+              data-bs-target="#personalWorkModal4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- personal work end -->
+    <!-- Commission Works -->
+    <section>
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Commission Works</h2>
+        <!-- Carousel for Mobile and Tablet -->
+        <div
+          id="commissionWorksCarousel"
+          class="carousel slide d-md-none"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="img/5.jpg"
+                class="d-block w-100"
+                alt="Commission Work 1"
+                data-bs-toggle="modal"
+                data-bs-target="#commissionWorkModal1"
+              />
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="img/6.jpg"
+                class="d-block w-100"
+                alt="Commission Work 2"
+                data-bs-toggle="modal"
+                data-bs-target="#commissionWorkModal2"
+              />
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="img/7.jpg"
+                class="d-block w-100"
+                alt="Commission Work 3"
+                data-bs-toggle="modal"
+                data-bs-target="#commissionWorkModal3"
+              />
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <img
+                src="img/8.jpg"
+                class="d-block w-100"
+                alt="Commission Work 4"
+                data-bs-toggle="modal"
+                data-bs-target="#commissionWorkModal4"
+              />
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#commissionWorksCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#commissionWorksCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Grid for Desktop -->
+        <div class="row d-none d-md-flex">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/5.jpg"
+              class="img-fluid"
+              alt="Commission Work 1"
+              data-bs-toggle="modal"
+              data-bs-target="#commissionWorkModal1"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/6.jpg"
+              class="img-fluid"
+              alt="Commission Work 2"
+              data-bs-toggle="modal"
+              data-bs-target="#commissionWorkModal2"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/7.jpg"
+              class="img-fluid"
+              alt="Commission Work 3"
+              data-bs-toggle="modal"
+              data-bs-target="#commissionWorkModal3"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <img
+              src="img/8.jpg"
+              class="img-fluid"
+              alt="Commission Work 4"
+              data-bs-toggle="modal"
+              data-bs-target="#commissionWorkModal4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Personal Work Modal 1 -->
+    <div
+      class="modal fade"
+      id="personalWorkModal1"
+      tabindex="-1"
+      aria-labelledby="personalWorkModal1Label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalWorkModal1Label">
+              Personal Work 1
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/1.jpg" class="img-fluid" alt="Personal Work 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="personalWorkModal2"
+      tabindex="-1"
+      aria-labelledby="personalWorkModal2Label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalWorkModal2Label">
+              Personal Work 2
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/2.jpg" class="img-fluid" alt="Personal Work 2" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="personalWorkModal3"
+      tabindex="-1"
+      aria-labelledby="personalWorkModal3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalWorkModal3Label">
+              Personal Work 3
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/3.jpg" class="img-fluid" alt="Personal Work 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="personalWorkModal4"
+      tabindex="-1"
+      aria-labelledby="personalWorkModal4Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalWorkModal4Label">
+              Personal Work 4
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/4.jpg" class="img-fluid" alt="Personal Work 4" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Commission Work Modal 1 -->
+    <div
+      class="modal fade"
+      id="commissionWorkModal1"
+      tabindex="-1"
+      aria-labelledby="commissionWorkModal1Label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commissionWorkModal1Label">
+              Commission Work 1
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/5.jpg" class="img-fluid" alt="Commission Work 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="commissionWorkModal2"
+      tabindex="-1"
+      aria-labelledby="commissionWorkModal2Label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commissionWorkModal2Label">
+              Commission Work 2
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/6.jpg" class="img-fluid" alt="Commission Work 2" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="commissionWorkModal3"
+      tabindex="-1"
+      aria-labelledby="commissionWorkModal3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commissionWorkModal3Label">
+              Commission Work 3
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/7.jpg" class="img-fluid" alt="Commission Work 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="commissionWorkModal4"
+      tabindex="-1"
+      aria-labelledby="commissionWorkModal4Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commissionWorkModal4Label">
+              Commission Work 4
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="img/8.jpg" class="img-fluid" alt="Commission Work 4" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+    <section class="jumbotron mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Grid Item 1: YOUR -->
+          <div class="col-12 col-lg-4 mb-3">
+            <img src="img/your.svg" alt="YOUR" class="img-fluid svg-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="jumbotron mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Grid Item 2: POSTER -->
+          <div class="col-12 col-lg-4 offset-lg-4 mb-3">
+            <img src="img/poster.svg" alt="POSTER" class="img-fluid svg-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="jumbotron mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Grid Item 3: MAKER -->
+          <div class="col-12 col-lg-4 offset-lg-8 mb-3">
+            <img src="img/maker.svg" alt="MAKER" class="img-fluid svg-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jumbotron end -->
+    <!-- info -->
+    <section class="jumbotron mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="text-start col-12 col-lg-4 mb-3 font-weight-bold">
+            <h3>
+              WE WORK<br />
+              IN GRUNGE/DIRTY<br />
+              (SOMETIMES CLEAN)<br />
+              STYLE.<br />
+            </h3>
+          </div>
+          <div class="text-start mt-0 col-12 col-lg-4 mb-3 font-weight-bold">
+            <h3>
+              POSTER<br />
+              BAND/BRAND LOGO<br />
+              COVER ART<br />
+              MERCH<br />
+            </h3>
+          </div>
+          <div class="text-start mt-0 col-12 col-lg-4 mb-3 font-weight-bold">
+            <h3>
+              IG<br />
+              TIKTOK<br />
+              EMAIL<br />
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info end -->
+    <!-- footer -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <img src="img/footer.svg" alt="footer" class="img-fluid svg-icon" />
+        </div>
+      </div>
+    </section>
+    <!-- footer end -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Warna latar belakang splash screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Pastikan berada di atas konten lain */
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.logo {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.loading {
+  font-size: 1.5em;
+  color: #000000; /* Warna teks loading */
+  margin-top: 10px;
+  display: flex;
+  gap: 0.3em; /* Jarak antar titik */
+}
+
+.loading span {
+  animation: blink 1.5s infinite alternate; /* Animasi kedip */
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.5s; /* Penundaan untuk titik kedua */
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 1s; /* Penundaan untuk titik ketiga */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#responsive-logo {
+  max-width: 100%; /* Pastikan logo tidak melebihi lebar kontainer */
+  height: auto; /* Pertahankan proporsi logo */
+  display: block;
+  margin: 0 auto; /* Pusatkan logo */
+}
+
+.container {
+  display: block; /* Pastikan elemen di dalam kontainer ditampilkan secara vertikal */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem; /* Tambahkan jarak antara judul dan konten di bawahnya */
+  text-align: center; /* Pastikan judul tetap di tengah */
+}
+
+.carousel-inner img {
+  margin: 0 auto; /* Pusatkan gambar di dalam carousel */
+}
+
+.svg-icon {
+  width: 100%; /* Pastikan SVG menyesuaikan dengan lebar kolom */
+  height: auto; /* Pertahankan proporsi SVG */
+  display: block;
+  margin: 0 auto; /* Pusatkan SVG secara horizontal */
+}
+
+@media (max-width: 768px) {
+  #responsive-logo {
+    max-width: 300px; /* Ukuran maksimum logo pada layar kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-lg {
+    max-width: 90%; /* Sesuaikan ukuran modal untuk layar kecil */
+  }
+
+  #responsive-logo {
+    max-width: 80%; /* Sesuaikan ukuran logo untuk layar kecil */
+  }
+
+  .jumbotron h1 {
+    font-size: 2.5rem; /* Ukuran font lebih kecil untuk mobile */
+  }
+
+  .svg-icon {
+    width: 80%; /* Ukuran SVG lebih kecil untuk mobile */
+  }
+}
+
+body {
+  padding-top: 56px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.navbar {
+  display: none; /* Sembunyikan navbar secara default */
+  padding: 0 2rem; /* Tambahkan padding kiri dan kanan untuk simetri */
+}
+
+.navbar.show {
+  display: flex; /* Tampilkan navbar setelah splash screen selesai */
+}
+
+.navbar .nav-link {
+  font-size: 1rem; /* Ukuran font */
+  font-weight: bold; /* Tebalkan teks */
+  text-transform: uppercase; /* Ubah teks menjadi huruf kapital */
+}
+
+.navbar .col-4 {
+  display: flex;
+  align-items: center; /* Pusatkan secara vertikal */
+  justify-content: center; /* Pastikan elemen berada di tengah */
+}
+
+.navbar .text-start {
+  justify-content: flex-start; /* HOME di kiri */
+}
+
+.navbar .text-end {
+  justify-content: flex-end; /* Pastikan INFO berada di kanan */
+  padding-left: -20rem; /* Sesuaikan jarak dengan tepi kanan */
+}
+
+.jumbotron {
+  background-color: #ffffff; /* Warna latar belakang */
+  padding: 2rem 0; /* Padding atas dan bawah */
+}
+
+.jumbotron h1 {
+  font-size: 3rem; /* Ukuran font besar */
+  text-align: center; /* Teks berada di tengah */
+}
+
+@media (min-width: 992px) {
+  /* Atur margin untuk desktop mode */
+  .jumbotron .row > div:nth-child(1) {
+    margin-top: 0; /* YOUR tetap di tempatnya */
+  }
+
+  .jumbotron .row > div:nth-child(2) {
+    margin-top: -2rem; /* POSTER turun sedikit */
+  }
+
+  .jumbotron .row > div:nth-child(3) {
+    margin-top: -4rem; /* MAKER turun lebih jauh */
+  }
+}
