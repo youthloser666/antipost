@@ -167,10 +167,10 @@ h3 {
   width: 0;
   height: 25px;
   background-color: #000000; /* Warna latar belakang navbar */
-  border-radius: 15px; /* Bentuk kapsul */
+  border-radius: 20px; /* Bentuk kapsul */
   transform: translateY(-50%);
   z-index: -1; /* Pastikan berada di belakang elemen lain */
-  padding: 0.5em; /* Padding untuk kapsul */
+  padding: 0.5em 1em; /* Padding untuk kapsul */
 }
 
 .navbar .container {
