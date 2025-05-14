@@ -15,6 +15,22 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../font/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../font/Helvetica-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .logo {
   font-size: 2em;
   margin-bottom: 15px;
@@ -105,21 +121,75 @@ h2 {
 
 body {
   padding-top: 56px; /* Sesuaikan dengan tinggi navbar */
+  scroll-padding-top: 56px; /* Sesuaikan dengan tinggi navbar */
+  font-family: "HelveticaNeue", sans-serif; /* Gunakan font yang telah didefinisikan */
+  font-weight: normal;
+  font-style: normal;
+  @media (minscreen-width: 992px) {
+    scroll-padding-top: 80px; /* Ukuran font untuk layar besar */
+  }
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "HelveticaNeue", sans-serif; /* Gunakan font yang telah didefinisikan */
+  font-weight: normal;
+  font-size: 1em;
+}
+
+h3 {
+  font-family: "HelveticaNeue", sans-serif; /* Gunakan font yang telah didefinisikan */
+  font-weight: bold; /* Tebalkan teks */
 }
 
 .navbar {
+  position: fixed;
   display: none; /* Sembunyikan navbar secara default */
-  padding: 0 2rem; /* Tambahkan padding kiri dan kanan untuk simetri */
+  justify-content: center;
+}
+
+.navbar-blur {
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
 }
 
 .navbar.show {
   display: flex; /* Tampilkan navbar setelah splash screen selesai */
 }
 
+.navbar .pill-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 25px;
+  background-color: #000000; /* Warna latar belakang navbar */
+  border-radius: 15px; /* Bentuk kapsul */
+  transform: translateY(-50%);
+  z-index: -1; /* Pastikan berada di belakang elemen lain */
+  padding: 0.5em; /* Padding untuk kapsul */
+}
+
+.navbar .container {
+  overflow: hidden; /* Agar pill bg tidak keluar container saat animasi */
+}
+
 .navbar .nav-link {
+  position: relative;
+  z-index: 1; /* Pastikan berada di atas kapsul */
+  padding: 0.5rem 1rem; /* Padding untuk link */
+  transition: color 0.3s ease; /* Transisi warna saat hover */
   font-size: 1rem; /* Ukuran font */
+  font-family: "HelveticaNeue", sans-serif;
   font-weight: bold; /* Tebalkan teks */
   text-transform: uppercase; /* Ubah teks menjadi huruf kapital */
+}
+
+.nav-link.active {
+  color: white; /* Warna teks aktif */
 }
 
 .navbar .col-4 {
@@ -135,6 +205,35 @@ body {
 .navbar .text-end {
   justify-content: flex-end; /* Pastikan INFO berada di kanan */
   padding-left: -20rem; /* Sesuaikan jarak dengan tepi kanan */
+}
+
+/* style.css atau di dalam tag <style> */
+@media (max-width: 767.98px) {
+  /* Ukuran breakpoint untuk layar kecil (mobile) */
+  .navbar .container {
+    justify-content: center !important; /* Gunakan !important jika perlu menimpa gaya Bootstrap */
+  }
+
+  .navbar .row {
+    justify-content: center !important;
+  }
+
+  /* Anda juga bisa menargetkan elemen menu secara lebih spesifik di sini */
+  .navbar .nav-item {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important; /* Contoh: membuat item menu bertumpuk dengan margin bawah */
+  }
+
+  .navbar .nav-link {
+    text-align: center !important; /* Memusatkan teks link */
+  }
+}
+
+#home,
+#works,
+#content-informasi {
+  padding-top: 56px;
+  margin-top: 56px;
 }
 
 .jumbotron {
@@ -160,4 +259,27 @@ body {
   .jumbotron .row > div:nth-child(3) {
     margin-top: -4rem; /* MAKER turun lebih jauh */
   }
+}
+
+.footer-logo {
+  max-width: 100%; /* Make logo responsive */
+  height: 100%; /* Maintain aspect ratio */
+  margin-left: auto;
+  margin-right: auto; /* Center the logo */
+}
+
+footer,
+.section-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+section {
+  padding-top: 5rem 0; /* Padding atas dan bawah */
 }
