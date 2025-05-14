@@ -131,3 +131,15 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+// Atau, jika Anda ingin mencegah klik kanan hanya pada elemen tertentu (misalnya, gambar):
+const gambar = document.getElementById("gambar-proteksi");
+if (gambar) {
+  gambar.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+}
